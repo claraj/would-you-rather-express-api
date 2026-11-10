@@ -10,8 +10,10 @@ const app = express()
 app.use('/', indexRouter)
 
 // Start server running 
-let server = app.listen(process.env.PORT || 3000, function() {
-    console.log('Express server running on port', server.address().port)
+
+const port = process.env.PORT || 3000
+const server = app.listen(port, function() {
+    console.log('Express server running on port', port)
 })
 
 
